@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://linearity-blog-2-0.ghost.io/sitemap.xml
+Disallow: /
+Disallow: /p/

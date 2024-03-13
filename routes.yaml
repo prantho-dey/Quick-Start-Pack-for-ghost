@@ -1,0 +1,13 @@
+routes:
+collections:
+    /blog/:
+        permalink: /blog/{slug}/
+        template: blog
+        data: page.blog
+        filter: "tag:hash-blog"
+    /:
+        permalink: /{slug}/
+        template: index
+taxonomies:
+    tag: /tag/{slug}/
+    author: /author/{slug}/

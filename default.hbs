@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{meta_title page=(t " | Page %")}}</title>
+    <link rel="stylesheet" href="{{asset '/css/style.css'}}">
+    <script>
+        var pagination_next_page_number = '{{ pagination.next }}',
+            pagination_available_pages_number = '{{ pagination.pages }}';
+    </script>
+    {{ghost_head}}
+</head>
+
+<body class="{{{block " bodyclass"}}} {{body_class}} overflow-x-hidden bg-[#000]">
+    {{> header }}
+
+    {{{body}}}
+
+    <div class="check-class"></div>
+
+    {{> footer}}
+    <script src="{{asset 'js/scripts.js'}}"></script>
+    {{!-- {{#is "home"}}
+        <script src="{{asset 'js/home-script.js'}}"></script>
+    {{/is}}
+    {{#is "post, page"}}
+        <script src="{{asset 'js/post-script.js'}}"></script>
+    {{/is}} --}}
+    {{{block "scripts"}}}
+    {{ghost_foot}}
+</body>
+</html>
